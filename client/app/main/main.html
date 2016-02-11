@@ -1,9 +1,9 @@
+<button class="button button1" ng-click="main.playSound()" >Play Sound</button>
 
-<div class="videogular-container">
+<div class="videogular-container" ng-hide="{{true}}">
     <videogular vg-theme="main.config.theme.url" class="videogular-container audio"
       vg-player-ready="main.onPlayerReady($API)">
         <vg-media vg-src="main.config.sources" vg-type="audio"></vg-media>
-
         <vg-controls>
             <vg-play-pause-button></vg-play-pause-button>
             <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
@@ -17,8 +17,7 @@
         </vg-controls>
     </videogular>
 </div>
-<a href="#" class="btn btn-bg btn-success" ng-click="main.playSound()" >Play</a>
-
+<!-- <a href="#" class="btn btn-bg btn-success" ng-click="main.playSound()" >Play</a> -->
 <!-- <navbar></navbar>
 
 <header class="hero-unit" id="banner">

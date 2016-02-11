@@ -11,23 +11,26 @@ class MainController {
     // $http.get('/api/things').then(response => {
     //   this.awesomeThings = response.data;
     // });
+    var soundFileURL = 'https://github.com/CyberAgent/boombox.js/blob/gh-pages/demo/media/sound.m4a?raw=true';
     this.config = {
               sources: [
-            {src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/audios/videogular.mp3"), type: "audio/mpeg"},
-            {src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/audios/videogular.ogg"), type: "audio/ogg"}
+            {src: $sce.trustAsResourceUrl(soundFileURL), type: 'audio/mp4'}
         ],
               theme: {
-        url: "http://www.videogular.com/styles/themes/default/latest/videogular.css"
+        url: 'http://www.videogular.com/styles/themes/default/latest/videogular.css'
               }
           };
     this.API = null;
   }
-  onPlayerReady = function(API) {
+
+  onPlayerReady(API) {
     this.API = API;
-  };
+  }
 
   playSound(){
+    this.API.play();
     this.API.seekTime(0);
+
   }
 
   addThing() {
