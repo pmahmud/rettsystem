@@ -6,7 +6,9 @@ angular.module('rettsystemApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'com.2fdevs.videogular',
+  'com.2fdevs.videogular.plugins.controls'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
